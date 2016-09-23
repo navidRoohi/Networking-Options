@@ -1,0 +1,17 @@
+
+
+    public static void main(String[] args){
+
+        String sConvertedResponse = "";
+        try {
+            HttpClient httpClient = new DefaultHttpClient(new BasicHttpParams());
+            HttpPost httpPost = new HttpPost("http://newjustin.com/translateit.php?action=translations&english_words=" + "book");
+            httpPost.setHeader("Content-type", "application/json");
+            HttpResponse response = httpClient.execute(httpPost);
+            sConvertedResponse = EntityUtils.toString(response.getEntity());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.print(sConvertedResponse);
+    }
+}
