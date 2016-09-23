@@ -11,7 +11,6 @@ import java.io.IOException;
  
     public static void main(String[] args){
 
-           // Another example for networking
         String sConvertedResponse = "";
         JSONObject jsonObjectMain = null;
         JSONArray jsonArray = null;
