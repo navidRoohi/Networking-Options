@@ -22,5 +22,7 @@ import java.io.IOException;
             e.printStackTrace();
         }
         System.out.print(sConvertedResponse);
+        // result:  {"translations": [{"arabic":" الكتاب"},{"chinese":" 本书"},{"danish":" bogen"},{"dutch":" boek"},{"french":" livre"},{"german":" Buch"},{"italian":" libro"},{"portuguese":" livro"},{"russian":" книга"},{"spanish":" libro"}]}{"translations": [{"arabic":" الكتاب"},{"chinese":" 本书"},{"danish":" bogen"},{"dutch":" boek"},{"french":" livre"},{"german":" Buch"},{"italian":" libro"},{"portuguese":" livro"},{"russian":" книга"},{"spanish":" libro"}]}
+
     }
 }
