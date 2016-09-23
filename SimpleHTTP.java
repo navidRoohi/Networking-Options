@@ -28,13 +28,19 @@ import java.io.IOException;
 
             // read the JSON
             jsonObjectMain = new JSONObject(sConvertedResponse);
-            //{"translations":[{"arabic":" الكتاب"},{"chinese":" 本书"},{"danish":" bogen"},{"dutch":" boek"},{"french":" livre"},{"german":" Buch"},{"italian":" libro"},{"portuguese":" livro"},{"russian":" книга"},{"spanish":" libro"}]}
             jsonArray = new JSONArray ( jsonObjectMain.optString("translations"));
-            // [{"arabic":" الكتاب"},{"chinese":" 本书"},{"danish":" bogen"},{"dutch":" boek"},{"french":" livre"},{"german":" Buch"},{"italian":" libro"},{"portuguese":" livro"},{"russian":" книга"},{"spanish":" libro"}]
-            jsonObject = jsonArray.getJSONObject(1);                         // {"chinese":" 本书"}
-            chineseTranslation  = jsonObject.optString("chinese");          //  本书
+            jsonObject = jsonArray.getJSONObject(1);
+            chineseTranslation  = jsonObject.optString("chinese");
 
+            // desire result
             System.out.println( jsonObjectMain );
+            //{"translations":[{"arabic":" الكتاب"},{"chinese":" 本书"},{"danish":" bogen"},{"dutch":" boek"},{"french":" livre"},{"german":" Buch"},{"italian":" libro"},{"portuguese":" livro"},{"russian":" книга"},{"spanish":" libro"}]}
+            System.out.println( jsonArray );
+            // [{"arabic":" الكتاب"},{"chinese":" 本书"},{"danish":" bogen"},{"dutch":" boek"},{"french":" livre"},{"german":" Buch"},{"italian":" libro"},{"portuguese":" livro"},{"russian":" книга"},{"spanish":" libro"}]
+            System.out.println( jsonObject );
+            // {"chinese":" 本书"}
+            System.out.println( chineseTranslation );
+            //  本书;
 
         } catch (IOException e) {
             e.printStackTrace();
